@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+    font-weight: 700;
+}
+
+.accounts_list {
+    margin-bottom: 40px;
+}
+
+.transfer_add_modal {
+    margin-bottom: 40px;
+}
+
+.account_address {
+    text-align: center;
+    text-decoration: underline;
+
+    margin-right: 30px;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px;
+    background: grey;
+
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+
+.tcm_modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0, 0.8);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.tcm_content {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+    overflow: auto;
+}

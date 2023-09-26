@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuCotnracment</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./js/index.js" defer type="module"></script>
+    <script src="./js/app.js" defer type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.1.2/web3.min.js" integrity="sha512-SY8ZHHpr1VtCWQ3a+YWBORQfRmBCZeSWgR5YJ7gW3XyhylLfIjPjva9fPc9xrjgFxFA95+7+ch7i15ykPiVcLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <div class="all_registered_users">
+        <h1>Зарегистрированные пользователи: </h1>
+        <div class="users">
+
+        </div>
+    </div> -->
+    <div class="accounts_list">
+        <label for="selectUser">Select User:</label>
+        <select id="selectUser" class="user_select">
+        </select>
+        <span id="userBalance">
+            Balance: (u dont select user)
+        </span>
+    </div>
+    <button class="transfer_add_modal">Add transfer</button>
+    <div class = 'tcm_modal'>
+        <div class = 'tcm_content'>
+            <input class = 'tcm_target' placeholder = 'Введите адрес получателя.'>
+            <input class = 'tcm_value' placeholder = 'Введите сумму перевода.'>
+            <button class = 'tcm_send'>Отправить средства.</button>
+        </div>
+    </div>
+</body>
+</html>
