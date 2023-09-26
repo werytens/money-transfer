@@ -57,3 +57,10 @@ body {
     border-radius: 6px;
     overflow: auto;
 }
+
+.transaction {
+    background: grey;
+
+    margin: 20px 0;
+    padding: 5px;
+}
