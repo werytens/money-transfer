@@ -1,4 +1,4 @@
-import { web3, accounts, contractInstanse } from '../app.js'
+import { web3 } from '../app.js'
 
 const transactionStatuses = {
     "0": 'Ожидает обработки',
@@ -19,7 +19,7 @@ async function renderTransactions(array) {
         let status = Object.keys(transactionStatuses).includes(String(transaction.status).slice(0)) ? transactionStatuses[String(transaction.status).slice(0)] : 'Статус транзакции неопознан';
         root.innerHTML += `
         <div class = 'transaction'>
-            <h3>Транзакция номер ${index + 1}</h3>
+            <h3>Транзакция номер ${index}</h3>
             <div>Адрес отправителя: ${transaction.owner}</div>
             <div>Статус: ${status}.</div>
             <div>Адрес получателя: ${transaction.target}</div>

@@ -1,4 +1,3 @@
-import { web3, accounts, contractInstanse } from '../app.js'
 import transfer from '../paymentFunctions/transfer.js';
 
 

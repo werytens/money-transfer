@@ -1,6 +1,5 @@
-import { web3, accounts, contractInstanse } from '../app.js'
+import { web3 } from '../app.js'
 
-const root = document.querySelector('.accounts_list');
 const userSelect = document.querySelector(".user_select");
 const balanceField = document.getElementById("userBalance");
 

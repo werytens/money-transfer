@@ -1,5 +1,3 @@
-import { web3, accounts, contractInstanse } from '../app.js'
-
 async function renderUsers(array, title) {
     const root = document.createElement('div');
     document.body.append(root);

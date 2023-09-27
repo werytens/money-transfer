@@ -2,9 +2,9 @@ const abi = [
 	{
 		"inputs": [
 			{
-				"internalType": "uint256",
+				"internalType": "string",
 				"name": "code",
-				"type": "uint256"
+				"type": "string"
 			},
 			{
 				"internalType": "uint256",
@@ -125,11 +125,6 @@ const abi = [
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -141,6 +136,11 @@ const abi = [
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
 	},
 	{
 		"inputs": [
@@ -225,4 +225,5 @@ const abi = [
 		"type": "function"
 	}
 ]
+
 export default abi;

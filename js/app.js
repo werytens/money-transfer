@@ -1,7 +1,7 @@
 import abi from "./abi.js";
 
 export let web3, contractInstanse;
-const contractAddress = "0x2Cd968f251b0d5F11b9Eb821BC70bE4fc5893AC5";
+export let contractAddress = "0xbA3a28C85E7D90761E9bd84A765497fC85e48864";
 
 export function network() {
 	web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
