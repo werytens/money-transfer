@@ -7,6 +7,7 @@ import renderTCcM from './renderFunctions/renderTransferCancelModal.js';
 import renderNowUser from './renderFunctions/renderNowUser.js';
 import renderChangeUsers from './renderFunctions/renderChangeUsers.js';
 import renderTAM from './renderFunctions/renderTransferAcceptModal.js';
+import renderReg from './renderFunctions/renderReg.js';
 
 const buttonAddTransfer = document.querySelector('.transfer_add_modal');
 const buttonCancelTransfer = document.querySelector('.transfer_cancel_modal');
@@ -38,19 +39,6 @@ renderTransactions(registeredTransactios);
 
 document.querySelector('.contract_balance').innerHTML = 'Баланс контракта = ' + await web3.utils.fromWei((await web3.eth.getBalance(contractAddress)), 'ether') + ' эфиров'
 
-document.querySelector('.test').addEventListener('click', () => {
-    console.log(document.querySelector('.now_user_address').innerHTML)
+document.querySelector('.reg_modal_show').addEventListener('click', () => {
+    renderReg();
 })
-
-// async function registration() {
-//     await contractInstanse.methods.registration("maxik2", accounts[1]).send({from: accounts[0]})
-// }
-// await registration()
-
-
-
-// async function addTransfer() {
-    // const result = await myContract.methods.store(value).send({ from: currentAccount }); //Обращаемся к методу (send - вызов с изменением состояния)
-    // console.log(await contractInstanse.methods.add_transfer);
-// }
-// addTransfer();

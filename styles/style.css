@@ -49,7 +49,7 @@ body {
 }
 
 
-.tcm_modal, .tc_modal, .ta_modal {
+.tcm_modal, .tc_modal, .ta_modal, .reg_modal {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
@@ -60,7 +60,7 @@ body {
     align-items: center;
 }
 
-.tcm_content, .tc_content, .ta_content {
+.tcm_content, .tc_content, .ta_content, .reg_content {
     background: white;
     color: black;
     padding: 10px;
@@ -73,4 +73,10 @@ body {
 
     margin: 20px 0;
     padding: 5px;
+}
+
+.reg_modal_show {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
 }
