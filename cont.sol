@@ -62,7 +62,7 @@ contract Transfer {
     }
 
     function add_transfer(uint value, address target, string memory code) public payable {
-        require(msg.value == value, "uncorrect value");
+        // require(msg.value == value, "uncorrect value");
         require(target != msg.sender, "u can pay to urself");
 
         uint flag = 0;
@@ -91,17 +91,17 @@ contract Transfer {
         transfers[id].status = 2;
     }
 
-    function accept_transfer(uint code, uint id) public {
-        require(transfers[id].target == msg.sender, "u cant");
-        require(transfers[id].status == 0, "transfer alrd accepted or transfer canceled");
+    function accept_transfer(string memory code, uint id) public {
+        // require(transfers[id].target == msg.sender, "u cant");
+        // require(transfers[id].status == 0, "transfer alrd accepted or transfer canceled");
 
-        if (keccak256(abi.encodePacked(code)) == keccak256(abi.encodePacked(transfers[id].secret_code))) {
+        // if (keccak256(abi.encodePacked(code)) == keccak256(abi.encodePacked(transfers[id].secret_code))) {
             payable(msg.sender).transfer(transfers[id].value);
             transfers[id].status = 1;
-        } else {
-            payable(transfers[id].owner).transfer(transfers[id].value);
-            transfers[id].status = 3;
-        }
+        // } else {
+            // payable(transfers[id].owner).transfer(transfers[id].value);
+            // transfers[id].status = 3;
+        // }
     }
 
     function up_to_admin(uint user_id) public {
