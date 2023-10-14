@@ -2,9 +2,9 @@ const abi = [
 	{
 		"inputs": [
 			{
-				"internalType": "string",
+				"internalType": "bytes32",
 				"name": "code",
-				"type": "string"
+				"type": "bytes32"
 			},
 			{
 				"internalType": "uint256",
@@ -30,9 +30,9 @@ const abi = [
 				"type": "address"
 			},
 			{
-				"internalType": "string",
+				"internalType": "bytes32",
 				"name": "code",
-				"type": "string"
+				"type": "bytes32"
 			}
 		],
 		"name": "add_transfer",
@@ -83,6 +83,11 @@ const abi = [
 						"internalType": "bytes32",
 						"name": "secret_code",
 						"type": "bytes32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "number",
+						"type": "uint256"
 					}
 				],
 				"internalType": "struct Transfer.Transfer[]",
@@ -125,6 +130,11 @@ const abi = [
 		"type": "function"
 	},
 	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
 		"inputs": [
 			{
 				"internalType": "uint256",
@@ -136,11 +146,6 @@ const abi = [
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
-	},
-	{
-		"inputs": [],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
 	},
 	{
 		"inputs": [
@@ -176,6 +181,11 @@ const abi = [
 				"internalType": "bytes32",
 				"name": "secret_code",
 				"type": "bytes32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "number",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",

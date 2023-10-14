@@ -10,23 +10,15 @@ import renderTAM from './renderFunctions/renderTransferAcceptModal.js';
 import renderReg from './renderFunctions/renderReg.js';
 
 const buttonAddTransfer = document.querySelector('.transfer_add_modal');
-const buttonCancelTransfer = document.querySelector('.transfer_cancel_modal');
-const buttonAcceptTransfer = document.querySelector('.transfer_accept_modal');
 
 const registeredUsers = await contractInstanse.methods.getAllUsers().call();
-const registeredTransactios = await contractInstanse.methods.getAllTransfers().call();
 
 buttonAddTransfer.addEventListener('click' , async () => {
     await renderTCM(registeredUsers);
 })
 
-buttonCancelTransfer.addEventListener('click', async () => {
-    await renderTCcM();
-})
 
-buttonAcceptTransfer.addEventListener('click', async () => {
-    await renderTAM();
-})
+localStorage.setItem('interfaceE', JSON.stringify({currentAccount: accounts[0]}))
 
 await renderChangeUsers(registeredUsers);
 renderNowUser(accounts[0]);
@@ -35,9 +27,9 @@ renderAccounts(accounts);
 renderUsers(accounts, 'Все пользователи');
 renderUsers(registeredUsers, 'Зарегистрированные пользователи');
 
-renderTransactions(registeredTransactios);
+renderTransactions();
 
-document.querySelector('.contract_balance').innerHTML = 'Баланс контракта = ' + await web3.utils.fromWei((await web3.eth.getBalance(contractAddress)), 'ether') + ' эфиров'
+document.querySelector('.contract_balance').innerHTML = 'Баланс контракта = ' + await web3.utils.fromWei((await web3.eth.getBalance(contractAddress)), 'ether')
 
 document.querySelector('.reg_modal_show').addEventListener('click', () => {
     renderReg();

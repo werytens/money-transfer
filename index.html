@@ -17,53 +17,80 @@
 </head>
 <body>
     <div class="contract_balance"></div>
-    <div class="now_user">
-        <h1>Текущий пользователь:</h1>
-        <span class="now_user_address"></span>
+    <div class="info_trans">
+        <div class="now_user">
+            <h1>Текущий пользователь:</h1>
+            <span class="now_user_address"></span>
+        </div>
+        <div class="transactions">
+
+        </div>
     </div>
-    <div class="accounts_change">
-        <label for="changeUser">Change User:</label>
-        <select id="changeUser" class="user_change">
-        </select>
-    </div>
-    <div class="accounts_list">
-        <label for="selectUser">Select User:</label>
-        <select id="selectUser" class="user_select">
-        </select>
-        <span id="userBalance">
-            Balance: (u dont select user)
-        </span>
+    <div class="user_menu">
+        <div class="accounts_change">
+            <label for="changeUser">Change User:</label>
+            <select id="changeUser" class="user_change">
+            </select>
+        </div>
+        <div class="accounts_list">
+            <label for="selectUser">Select User:</label>
+            <select id="selectUser" class="user_select">
+            </select>
+            <span id="userBalance">
+                Balance: (ns)
+            </span>
+        </div>
     </div>
     <div class="buttons">
         <button class="transfer_add_modal">Add transfer</button>
-        <button class="transfer_cancel_modal">Cancel transfer</button>
-        <button class="transfer_accept_modal">Accept transfer</button>
+        <!-- <button class="transfer_cancel_modal">Cancel transfer</button> -->
+        <!-- <button class="transfer_accept_modal">Accept transfer</button> -->
     </div>
-    <div class = 'tcm_modal'>
-        <div class = 'tcm_content'>
-            <input class = 'tcm_target' placeholder = 'Введите адрес получателя.'>
-            <input class = 'tcm_value' placeholder = 'Введите сумму перевода.'>
-            <button class = 'tcm_send'>Отправить средства.</button>
+
+
+
+
+    <!-- Users Info -->
+    <div class="users">
+
+    </div>
+
+    <!-- Now Users Info -->
+    <div class="now_users">
+
+    </div>
+
+
+
+
+    <div class="modals">
+        <div class = 'tcm_modal'>
+            <div class = 'tcm_content'>
+                <input class = 'tcm_target' placeholder = 'Введите адрес получателя.'>
+                <input class = 'tcm_value' placeholder = 'Введите сумму перевода.'>
+                <input class="tcm_code" placeholder="Введите кодовое слово">
+                <button class = 'tcm_send'>Отправить средства.</button>
+            </div>
         </div>
-    </div>
-    <div class="tc_modal">
-        <div class="tc_content">
-            <input type="text" placeholder="Введите номер транзакции" class="tc_input">
-            <button class="tc_button">Отменить</button>
+        <div class="tc_modal">
+            <div class="tc_content">
+                <input type="text" placeholder="Введите номер транзакции" class="tc_input">
+                <button class="tc_button">Отменить</button>
+            </div>
         </div>
-    </div>
-    <div class="ta_modal">
-        <div class="ta_content">
-            <input type="text" class="ta_input" placeholder="Введите номер транзакции">
-            <button class="ta_button">Принять</button>
+        <div class="ta_modal">
+            <div class="ta_content">
+                <input type="text" class="ta_input" placeholder="Введите кодовое слово">
+                <button class="ta_button">Принять</button>
+            </div>
         </div>
-    </div>
-    <div class="reg_modal_show">Регистрация</div>
-    <div class="reg_modal">
-        <div class="reg_content">
-            <input type="text" class="reg_input" placeholder="Введите имя">
-            <input type="text" class="reg_input_two" placeholder="Введите адрес">
-            <button class="reg_button">Зарегистрировать</button>
+        <div class="reg_modal_show">Регистрация</div>
+        <div class="reg_modal">
+            <div class="reg_content">
+                <input type="text" class="reg_input" placeholder="Введите имя">
+                <input type="text" class="reg_input_two" placeholder="Введите адрес">
+                <button class="reg_button">Зарегистрировать</button>
+            </div>
         </div>
     </div>
 </body>

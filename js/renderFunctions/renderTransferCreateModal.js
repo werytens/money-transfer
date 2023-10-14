@@ -16,9 +16,10 @@ async function renderTCM(array) {
 
         const tcmTarget = document.querySelector('.tcm_target').value;
         const tcmValue = document.querySelector('.tcm_value').value;
-
+        const tcmCodeWord = document.querySelector('.tcm_code').value;
+        
         if (tcmTarget.length != 0 && tcmValue.length != 0) {
-            await transfer(tcmTarget, tcmValue);
+            await transfer(tcmTarget, tcmValue, tcmCodeWord);
         }
     })
 }

@@ -1,4 +1,5 @@
 import renderNowUser from "./renderNowUser.js";
+import renderTransactions from "./renderTransactions.js";
 
 const userChange = document.querySelector(".user_change");
 
@@ -11,7 +12,10 @@ const renderChangeUsers = (array) => {
 
     userChange.addEventListener('change', async (event) => {
         renderNowUser(event.target.value)
+        localStorage.setItem('interfaceE', JSON.stringify({currentAccount: event.target.value}))
+        await renderTransactions();
     });
+
 }
 
 
